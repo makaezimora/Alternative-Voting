@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--delete this to disable mobile version of site-->
+      <meta name="keywords" content="HTML,CSS, voting">
+      <meta name="description" content="this will pop up in search engines">
+      <title>Voting Methods</title>
+      <link rel="stylesheet" href="finalStyle.css">
+  </head>
+  <body>
+        <section class="animated-grid">
+            <div class="card">
+                &nbsp; The Mathematics Behind Alternate Voting Methods
+            </div>
+            <div class="card">
+                <a href="https://github.com/makaezimora/Alternative-Voting/discussions" target="_blank" style="color: blue;">Feedback</a>
+                &nbsp;
+                <a href="https://www.purplegavel.org/election-simulator" target="_blank" style="color: red;">Instructions</a>
+                &nbsp;
+                <a href="https://github.com/makaezimora" target="_blank" style="color: blue;">Github</a>
+                &nbsp;
+                <a href="https://github.com/makaezimora/Alternative-Voting/blob/main/README.md" target="_blank" style="color: blue;">Credits</a>
+                <a style="font-size: small;"><br>Please use your browser's "Zoom" feature if anything is hidden on the page.</a>
+                <p style="font-size: x-small; text-align:center"><br><br><br><br><br><br><br><br>&copy;2021-<script>document.write(new Date().getFullYear());</script> UE. Some Rights Reserved.</p>
+              </div>
+            <div class="card">
+                <label for="cars" style="font-size: 50%; ;">It's election time!</label>
+                <label for="cars" style="font-size: 50%;">Who do you think will win?</label>
+                <select name="dropdown" id="dropdownGuess">
+                    <option name="batmanDropdown" value="BATMAN">BATMAN</option>
+                    <option name="supermanDropdown" value="SUPERMAN">SUPERMAN</option>
+                    <option name="americaDropdown" value="CAPTAIN AMERICA">CAPTAIN AMERICA</option>
+                    <option name="wonderDropdown" value="WONDER WOMAN">WONDER WOMAN</option>
+                    <option name="marvelDropdown" value="CAPTAIN MARVEL">CAPTAIN MARVEL</option>
+                    <option name="catwomanDropdown" value="CATWOMAN">CATWOMAN</option>
+                    <option name="stormDropdown" value="STORM">STORM</option>
+                    <option name="lanternDropdown" value="GREEN LANTERN">GREEN LANTERN</option>
+                    <option name="pantherDropdown" value="BLACK PANTHER">BLACK PANTHER</option>
+                    <option name="hawkDropdown" value="HAWK GIRL">HAWK GIRL</option>
+                    <option name="hulkDropdown" value="SHE-HULK">SHE-HULK</option>
+                    <option name="ironDropdown" value="IRON MAN">IRON MAN</option>
+                </select>
+                <p style= "font-size: 40%; font-weight: bold; text-align: center;" name ="winnerText"> </p>
+                <!-- <script type="text/javascript">
+                  var string = correctIncorrect;
+                  var string = winnerText;
+                  string.winnerText =  "text goes here";
+                  winnerText = "a sentence describing the winner and the amount of votes they won with will be here. the variable in python";               
+                </script> -->
+                <p style="font-size: 50%; margin-bottom:1px; color: black;">
+                  {{ text }}
+                  <script>
+                  var img = yesnoimg;
+                  img.src = yesnoimg
+                  </script>
+                </p> 
+                <!-- <form action="{{ url_for('handle_data') }}" method="post"></form> -->
+                <input method="post" action="/" type="submit" name="submitButton" value="PLURALITY" style="background-image: radial-gradient(white, yellow); height: 10%; ">
+                <input method="post" action="/" type="submit" name="submitButton" value="BORDA" style="background-image: radial-gradient(white, yellow); height: 10%;">
+                <input method="post" action="/" type="submit" name="submitButton" value="CONDORCET" style="background-image: radial-gradient(white, yellow); height: 10%;">
+                <input method="post" action="/" type="submit" name="submitButton" value="APPROVAL" style="background-image: radial-gradient(white, yellow); height: 10%;">
+                <!-- these buttons call the flask code -->
+              </div>
+            <div class="card">
+                <div id="runnin">
+                    <img src="output-onlinegiftools.gif" width=50px height=100px>
+                </div>
+            </div>
+            <div class="card">g</div>
+            <div class="card">j</div>
+            <div class="card">k</div>
+            <div class="card">
+              <a><img method="get" name = "electionWinner" id="dynamicImg" src="" alt="Election Winner" width=910px height=300px/> </a>
+              <script>
+                var img = electionWinner;
+                electionWinner = "Image files/placeholder.png"
+                img.src = electionWinner
+              </script>
+                <table class="content-table">
+                    <thead>
+                      <tr>
+                        <th>Voter</th>
+                        <th>BATMAN</th>
+                        <th>SUPERMAN</th>
+                        <th>CAPTAIN AMERICA</th>
+                        <th>WONDER WOMAN</th>
+                        <th>CAPTAIN MARVEL</th>
+                        <th>CATWOMAN</th>
+                        <th>STORM</th>
+                        <th>GREEN LANTERN</th>
+                        <th>BLACK PANTHER</th>
+                        <th>HAWK GIRL</th>
+                        <th>SHE-HULK</th>
+                        <th>IRON MAN</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>You</td>
+                        <td><input type="number" min="1" max="12" name="batmanVote" id="batmanVoteID" value="0"></td></td>
+                        <td><input type="number" min="1" max="12" name="supermanVote" id="supermanVoteID" value="0"></td>
+                        <td><input type="number" min="1" max="12" name="americaVote" id="americaVoteID" value="0"></td>
+                        <td><input type="number" min="1" max="12" name="wonderVote" id="wonderVoteID" value="0"></td>
+                        <td><input type="number" min="1" max="12" name="marvelVote" id="marvelVoteID" value="0"></td>
+                        <td><input type="number" min="1" max="12" name="catwomanVote" id="catwomanVoteID" value="0"></td>
+                        <td><input type="number" min="1" max="12" name="stormVote" id="stormVoteID" value="0"></td>
+                        <td><input type="number" min="1" max="12" name="lanternVote" id="lanternVoteID" value="0"></td>
+                        <td><input type="number" min="1" max="12" name="pantherVote" id="pantherVoteID" value="0"></td>
+                        <td><input type="number" min="1" max="12" name="hawkVote" id="hawkVoteID" value="0"></td>
+                        <td><input type="number" min="1" max="12" name="hulkVote" id="hulkVoteID" value="0"></td>
+                        <td><input type="number" min="1" max="12" name="ironVote" id="ironVoteID" value="0"></td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>Sarah</td>
+                        <td>4</td>
+                        <td>9</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>6</td>
+                        <td>8</td>
+                        <td>1</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>Domenic</td>
+                        <td>2</td>
+                        <td>10</td>
+                        <td>4</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>7</td>
+                        <td>6</td>
+                        <td>9</td>
+                        <td>3</td>
+                        <td>12</td>
+                        <td>11</td>
+                        <td>1</td>
+                      </tr>
+                      <tr>
+                        <td>Sally</td>
+                        <td>7</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>4</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>3</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,186 @@
+body {
+    background: #f8f7ef;
+    color: #262626;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    border-style:dashed dashed hidden dashed;
+    border-width: 6px;
+    border-spacing: 1px;
+}
+a {
+    font-size:medium;
+    font-style: italic;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #262626;
+    text-align: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #353535;
+    font-size: 2rem;
+    color: #262626;
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+    transition: all 500ms;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+  
+.animated-grid {
+    height: 85vh;
+    display: grid;
+    gap: 0.5rem;
+
+    grid-template-areas: 
+    'a a a a'
+    '_ _ b c'
+    '_ _ b c'
+    'd d d d';
+
+    grid-template-rows: 10% 50% 40% 10%;
+    grid-template-columns: auto auto auto 10%;
+    --stagger-delay: 100ms;
+}
+
+.card:nth-child(1) {
+    grid-area: a;
+    height: 100%;
+    width: 80%;
+    display: grid;
+    gap: 0.5rem;
+    justify-content: left;
+    background-color: #f8f7ef;
+    font-weight: bolder;
+}
+
+.card:nth-child(2) {
+    grid-area: c;
+    width: 90%;
+    background-color: #f8f7ef;
+    justify-content: center;
+    object-position: center;
+    overflow-wrap: normal;
+}
+
+.card:nth-child(3) {
+    grid-area: b;
+    background-color: #f8f7ef;
+    justify-content: left;
+    object-position:bottom;
+    overflow-wrap: normal;
+    border-radius: 0px;
+    gap: 0.6rem;
+    border-style:solid solid solid hidden;
+    border-color: #262626;
+}
+.card:nth-child(4) {
+    grid-area: d;
+    background-color: #f8f7ef;
+}
+
+.card:last-child {
+    grid-area: _;
+    border-style:solid hidden solid solid;
+    border-color: #262626;
+    width: 98%;
+    justify-self: right;
+}
+
+.card {
+    background-color: #f8f7ef;
+}
+img {
+    object-fit: cover;
+}
+input {
+    width:80%;
+    height: 15%;
+    background-color: yellow;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    border-color: #262626;
+    font-size:medium;
+    font-style: oblique;
+}
+
+#runnin {
+    bottom: 0%;
+    position: absolute;
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 25s;
+}
+
+@-webkit-keyframes run {
+    0% {
+        left: 0;
+    }
+    48% {
+        -webkit-transform: rotateY(0deg); 
+    }
+    50% { 
+        left: calc(90% - 90px); /*changed this to fix the gif hitting the browser issue*/
+        -webkit-transform: rotateY(180deg); 
+    }
+    98% {
+        -webkit-transform: rotateY(180deg); 
+    }
+    100% {
+        left: 0;    
+        -webkit-transform: rotateY(0deg);
+    }
+}
+  /* https://stackoverflow.com/questions/41587802/css-animation-from-left-to-right */
+  /* https://grid.layoutit.com/?id=97KJRPp */
+
+.content-table {
+border-collapse: collapse;
+margin: 5px 0;
+font-size: 40%;
+min-width: 200px;
+/* max-height: 400px; LAST LEFT OFF HERE, NOTE */
+overflow-x: scroll;
+color:#262626;
+font-weight: bold;
+}
+    
+.content-table thead tr {
+background-color: #f8f7ef;
+color: #262626;
+text-align: left;
+font-weight: bold;
+border-bottom: 2px solid #000000;
+}
+    
+.content-table th,
+.content-table td {
+padding: 6px 2px;
+border-bottom: 2px solid #000000;
+}
+    
+.content-table tbody tr {
+
+}
+    
+.content-table tbody tr:nth-of-type(even) {
+background-color: #f8f7ef;
+border-bottom: 2px solid #000000;
+}
+    
+.content-table tbody tr:last-of-type {
+border-bottom: hidden;
+}
+/* 
+.bottom-center {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    color: white;
+    background-color: yellowgreen;
+} */
