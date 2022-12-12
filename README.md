@@ -19,7 +19,7 @@ In 2020 I was assigned this course project about modeling alternative voting met
 
 ## Demo
 
-I made a `tkinter` GUI version of this before trying to convert it to a Flask web app that could be hosted online.
+I made a `tkinter` GUI version of this before trying to convert it to a `Flask` web app that could be hosted online.
 
 ###### Watch the demo video below :movie_camera:
 [<img src="https://img.youtube.com/vi/uj06sldniCQ/maxresdefault.jpg" width="300">](https://youtu.be/uj06sldniCQ?t=204)
